@@ -21,11 +21,13 @@ a {
 }
 
 h1 {
+  font-size: 102px;
   font-weight: 600;
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 60px;
+  line-height: 1.15;
 }
 
 h3 {
@@ -34,7 +36,6 @@ h3 {
 
 h4 {
   font-size: 18px;
-  font-weight: normal;
 }
 
 h5 {
@@ -44,22 +45,21 @@ h5 {
 }
 
 .header {
+  display: flex;
+  position: relative;
+  align-items: center;
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
   padding-left: 64px;
   background-color: #f2f2f2;
-  position: relative;
-  display: flex;
-  align-items: center;
 }
 
-.description {
+.two-columns {
   display: flex;
   justify-content: space-between;
   min-width: 784px;
   width: 80%;
-  /*border: 2px solid blue;*/
   margin: 100px auto;
 }
 
@@ -87,23 +87,27 @@ h5 {
 
 .header__title{
   position: absolute;
-  font-size: 102px;
+  width: 730px;
   line-height: 96px;
   z-index: 2;
-  min-width: 730px;
-  width: 100%;
 }
 
 .logo_practicum {
   width: 183px;
   height: 32px;
   background-image: url('../images/logo_place_header.svg');
-  position: absolute;
 }
 
-.logo_position_top {
+.logo__place_header {
+  position: absolute;
+  z-index: 3;
   top: 30px;
   left: 64px;
+}
+
+.logo__place_footer {
+  height: 35px;
+  z-index: 3;
 }
 
 .header__main-illustration{
@@ -126,26 +130,24 @@ h5 {
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
-  height: 568px;
-  width: 568px;
-  background-color: #2f80ed;
   position: absolute;
   top: 64px;
   right: 0;
+  height: 568px;
+  width: 568px;
+  background-color: #2f80ed;
   z-index: 0;
 }
 
 .header__subtitle {
-  width: 388px;
-  line-height: 25px;
-  font-weight: normal;
   position: absolute;
   left: 64px;
   bottom: 30px;
+  width: 388px;
+  line-height: 25px;
+  font-weight: normal;
   z-index:3;
 }
-
-
 
 .span-accent {
   font-weight: 600;
@@ -159,42 +161,35 @@ h5 {
   display: flex;
   justify-content: center;
   width: 60%;
-  font-size: 60px;
-  line-height: 1.15;
   margin: 0 auto 20px auto;
 }
 
 .section-subtitle {
   display: flex;
+  width: 60%;
   justify-content: center;
   line-height: 34px;
-  font-size: 24px;
   font-weight: normal;
   margin: 0 auto;
 }
 
-.section-title_color_dark {
+.section-title_theme_dark {
   padding-top: 90px;
   color: #fff;
 }
 
-.section-subtitle_color_dark {
+.section-subtitle_theme_dark {
   color: #fff;
 }
 
 .table {
   display: flex;
-  z-index: 3;
 }
 
 .table__body {
   width: 1100px;
   margin: auto;
   z-index: 3;
-}
-
-.table__body_theme_dark {
-
 }
 
 .table__row {
@@ -218,10 +213,6 @@ h5 {
   margin-right: 0;
 }
 
-.section-title {
-
-}
-
 .table__heading {
   font-size: 24px;
   line-height: 1.15;
@@ -231,11 +222,12 @@ h5 {
 .table__text {
   font-size: 18px;
   line-height: 1.2;
+  font-weight: normal;
 }
 
 .feynman {
   background-color: #f2f2f2;
-  min-height: 867px;
+  min-height: 890px;
   position: relative;
   z-index: 1;
 }
@@ -269,14 +261,16 @@ h5 {
   display: flex;
   position: absolute;
   right: 48px;
-  top: 51.45%;
+  top: 50.2%;
   flex-direction: column;
   margin: auto;
   font-size: 36px;
   line-height: 51px;
+  z-index: 3;
 }
 
 .feynman__link:hover {
+  cursor: alias;
   color: blue;
 }
 
@@ -317,8 +311,8 @@ h5 {
   justify-content: center;
   background-color: #1f1f1f;
   color: white;
-  padding-top: 60px;
-  padding-bottom: 40px;
+  padding: 60px 0 40px 0;
+  min-height: 350px;
 }
 
 .footer__column-heading {
@@ -330,35 +324,29 @@ h5 {
 
 .footer__columns {
   display: flex;
-  flex-direction: column;
-  height: 200px;
+  flex-direction: row;
   width: 90%;
 }
 
-.column__info {
+.footer__author {
   line-height: 25px;
   font-size: 18px;
   margin: 18px 0;
 }
 
-.logo__footer {
-  width: 183px;
-  height: 32px;
-  background-image: url('../images/logo_place_header.svg');
-  position: static;
-}
-
-.footer__columns {
+.footer__column-links {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .footer__column-link {
+  display: flex;
+  align-items: center;
   line-height: 30px;
   color: white;
 }
 
-.footer__columns_position_left {
+.footer__column_content_copyright {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -377,7 +365,7 @@ h5 {
   margin-right: 10px;
 }
 
-.footer__columns_content_info {
+.footer__column_content_info {
   min-width: 40%;
   display: flex;
   align-items: center;
@@ -389,6 +377,3 @@ h5 {
   align-items: flex-start;
 }
 
-div {
-  border: 1px solid red;
-}
