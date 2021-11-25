@@ -1,47 +1,10 @@
 .page {
   min-width: 1100px;
-  /* мы ещё не умеем делать мобильную версию сайта, */
-  /* поэтому выше установлена минимальная ширина страницы */
   max-width: 1600px;
-  /* выше установили ограничение по максимальной ширине */
   margin: 0 auto;
-  /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
-}
-
-h1, h2, h3, h4, h5, h6, table {
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-  color: #2f80ed;
-}
-
-h1 {
-  font-size: 102px;
-  font-weight: 600;
-}
-
-h2 {
-  font-size: 60px;
-  line-height: 1.15;
-}
-
-h3 {
-  font-size: 24px;
-}
-
-h4 {
-  font-size: 18px;
-}
-
-h5 {
-  font-size: 18px;
-  font-weight: 400;
-  color: #2f80ed;
 }
 
 .header {
@@ -58,7 +21,6 @@ h5 {
 .two-columns {
   display: flex;
   justify-content: space-between;
-  min-width: 784px;
   width: 80%;
   margin: 100px auto;
 }
@@ -71,7 +33,13 @@ h5 {
   line-height: 1.2;
 }
 
+.two-columns__brief_header {
+  font-weight: normal;
+  margin: 0;
+}
+
 .two-columns__main-text {
+  min-width: 784px;
   width: 80%;
   line-height: 34px;
   font-size: 24px;
@@ -86,9 +54,11 @@ h5 {
 }
 
 .header__title{
-  position: absolute;
-  width: 730px;
+  font-size: 102px;
+  max-width: 730px;
+  font-weight: 600;
   line-height: 96px;
+  margin: 0;
   z-index: 2;
 }
 
@@ -106,6 +76,7 @@ h5 {
 }
 
 .logo__place_footer {
+  background-image: url('../images/logo_place_footer.svg');
   height: 35px;
   z-index: 3;
 }
@@ -128,7 +99,6 @@ h5 {
   color: #2f80ed;
 }
 
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
   position: absolute;
   top: 64px;
@@ -141,9 +111,10 @@ h5 {
 
 .header__subtitle {
   position: absolute;
+  margin: 0;
   left: 64px;
   bottom: 30px;
-  width: 388px;
+  max-width: 388px;
   line-height: 25px;
   font-weight: normal;
   z-index:3;
@@ -158,6 +129,8 @@ h5 {
 }
 
 .section-title {
+  font-size: 60px;
+  line-height: 1.15;
   display: flex;
   justify-content: center;
   width: 60%;
@@ -169,6 +142,7 @@ h5 {
   width: 60%;
   justify-content: center;
   line-height: 34px;
+  font-size: 24px;
   font-weight: normal;
   margin: 0 auto;
 }
@@ -183,6 +157,7 @@ h5 {
 }
 
 .table {
+  margin: 0;
   display: flex;
 }
 
@@ -206,7 +181,6 @@ h5 {
   width: 250px;
 }
 
-/* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
   width: 200px;
   color: white;
@@ -217,9 +191,11 @@ h5 {
   font-size: 24px;
   line-height: 1.15;
   font-weight: 600;
+  margin: 0 0 20px 0;
 }
 
 .table__text {
+  margin: 0;
   font-size: 18px;
   line-height: 1.2;
   font-weight: normal;
@@ -233,7 +209,6 @@ h5 {
 }
 
 .feynman__headers {
-  position: absolute;
   padding-top: 100px;
   z-index: 3;
   margin: 0 auto 0 auto;
@@ -246,15 +221,17 @@ h5 {
 .feynman__title {
   width: 648px;
   font-size: 120px;
+  font-weight: 600;
   line-height: 1.15;
   text-align: center;
-  margin-bottom: 70px;
+  margin: 0 0 70px 0;
 }
 
 .feynman__subtitle {
   font-size: 36px;
   line-height: 51px;
   font-weight: normal;
+  margin: 0;
 }
 
 .feynman__link {
@@ -267,6 +244,8 @@ h5 {
   font-size: 36px;
   line-height: 51px;
   z-index: 3;
+  text-decoration: none;
+  color: #2f80ed;
 }
 
 .feynman__link:hover {
@@ -280,7 +259,7 @@ h5 {
   height: 637px;
   bottom: 0;
   left: 0;
-  z-index: 0;
+  z-index: -1;
 }
 
 .kaufman {
@@ -293,8 +272,9 @@ h5 {
   background-image: url("../images/kaufman-triangle.svg");
   background-repeat: no-repeat;
   position: absolute;
+  background-size: contain;
   right: -210px;
-  bottom: 0;
+  top: 0;
   width: 877px;
   height: 877px;
   z-index: 0;
@@ -310,16 +290,17 @@ h5 {
   display: flex;
   justify-content: center;
   background-color: #1f1f1f;
+  box-sizing: border-box;
   color: white;
   padding: 60px 0 40px 0;
   min-height: 350px;
 }
 
 .footer__column-heading {
+  margin: 0;
   padding-bottom: 20px;
   font-weight: 600;
   line-height: 30px;
-  width: 130px;
 }
 
 .footer__columns {
@@ -341,6 +322,7 @@ h5 {
 
 .footer__column-link {
   display: flex;
+  text-decoration: none;
   align-items: center;
   line-height: 30px;
   color: white;
@@ -350,7 +332,7 @@ h5 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 711px;
+  flex-basis: 711px;
 }
 
 .footer__columns_position_right {
@@ -366,9 +348,9 @@ h5 {
 }
 
 .footer__column_content_info {
-  min-width: 40%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  margin: 0 auto;
 }
 
 .footer__columns-content {
@@ -376,4 +358,3 @@ h5 {
   flex-direction: column;
   align-items: flex-start;
 }
-
