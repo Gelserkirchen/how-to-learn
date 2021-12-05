@@ -519,3 +519,7 @@
   width: 270px;
   height: 38px;
 }
+
+.video__iframe {
+  border: 0;
+}
